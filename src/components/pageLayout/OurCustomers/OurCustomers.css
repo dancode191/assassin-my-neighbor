@@ -65,6 +65,19 @@
     transform: rotateZ(180deg);
 }
 /* responsive: */
+@media screen and (min-width: 1400px) {
+    .ourCustomersContainer{
+        overflow-y: scroll;
+    }
+    .OurCustomersReviewBox{
+        height: 100%;
+    }
+    .reviewBox {
+        padding: 1rem 0rem;
+        margin: 1rem 1rem;
+        max-height: 30rem;
+    }
+}
 @media screen and (max-width: 400px) {
     .profilePic1 {
             width: 4rem;
