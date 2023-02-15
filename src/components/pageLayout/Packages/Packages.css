@@ -1,0 +1,237 @@
+.packagesContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.packagesText{
+    background: #050609;
+    color: #f3f3f3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.packagesText>h1{
+    text-align: center;
+}
+.packagesText>p{
+    width: 70%;
+    text-align: center;
+}
+.packagesContactUsLink{
+    color: #c1292e;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.packagesContactUsLink:hover{
+    color: #C2C5BB;
+}
+.packagesBox{
+    background: #710000;
+    height: auto;
+}
+.packagesBox h3{
+    margin-bottom: 10PX;
+}
+.StarsPackgae, .swordPackage, .poisionPackage, .sushiPackage{
+    margin: 20px 10px 20px 10px;
+    border-radius: 1em;
+    background: #f3f3f3;
+    width: 250px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ****** Stars Package ****** */
+.packageStarsImage{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+}
+.packageInfo{
+    height: 13rem;
+    text-align: center;
+    padding-top: 30px;
+}
+.StarsPackgae:hover .shurik1, .StarsPackgae:hover .shurik2{
+    animation: spin 3s linear infinite;
+}
+.shurik1{
+    width: 3rem;
+}
+.shurik2{
+    align-self: flex-end;
+}
+@keyframes spin{
+    0%{
+        transform: rotateZ(0deg);
+        margin-bottom: 0px;
+    }
+    50%{
+        margin-bottom: 15px;
+    }
+    100%{
+        transform: rotateZ(360deg);
+        margin-bottom: 0px;
+    }
+}
+
+/* ****** Sword Package ****** */
+.packageSwordImage{
+    position: relative;
+    height: 8rem;
+}
+.packageSwordImage::before{
+    content: '';
+    position: absolute;
+    background: #710000;
+    border-radius: 50%;
+    height: 0.5rem;
+    width: 0.5rem;
+    top: 25%;
+    left: 75%;
+    opacity: 0;
+    transition: 1s linear;
+}
+.packageSwordImage::after{
+    content: '';
+    position: absolute;
+    background: #710000;
+    border-radius: 50%;
+    height: 0.4rem;
+    width: 0.4rem;
+    top: 30%;
+    left: 65%;
+    opacity: 0;
+    transition: 1s linear;
+}
+.swordPackage:hover .packageSwordImage::before{
+    top: 0%;
+    left: 110%;
+    opacity: 1;
+}
+.swordPackage:hover .packageSwordImage::after{
+    top: 10%;
+    left: 90%;
+    opacity: 1;
+}
+
+/* ****** Poision Package ****** */
+.packagePoisionImage{
+    height: 8rem;
+    width: 8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.packagePoisionImage::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, #c6f673,
+        #5da32d);
+    opacity: 0.8;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid #dfdbdb;
+    top: 65%;
+    left: 50%;
+    
+}
+.packagePoisionImage::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, #c6f673,
+        #5da32d);
+    opacity: 0;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    border: 1px solid #dfdbdb;
+    top: 65%;
+    left: 30%;
+}
+.poisionPackage:hover .packagePoisionImage::before, .poisionPackage:hover .packagePoisionImage::after{
+    animation: bubbles 2.5s ease-in-out infinite;
+}
+.poisionPackage:hover .packagePoisionImage::after{
+    animation: bubbles 2.5s ease-in-out infinite 1s;
+}
+@keyframes bubbles{
+    0%{
+        top: 65%;
+        opacity: 0.8;
+    }
+    100%{
+        top: 45%;
+        opacity: 0.1;
+    }
+}
+.poisionBackground{
+    position: absolute;
+    background: linear-gradient(to right,#c6f673, #5da32d );
+    clip-path: polygon(100% 100%, 0% 100%, 0% 40%, 12% 37%, 28% 39%, 39% 46%, 51% 55%, 67% 56%, 81% 53%, 90% 48%, 100% 45%);
+    border-radius: 0px 0px 1.7rem 1.7rem;
+    width: 5rem;
+    height: 6rem;
+    align-self: flex-end;
+    transition: 6s;
+    
+}
+.poison{
+    width: 7.3rem;
+    position: absolute;
+    align-self: flex-end;
+}
+.poisionPackage:hover .poisionBackground{
+    animation: poisionWaves 3s ease-in-out infinite;
+}
+@keyframes poisionWaves {
+    0%,100%{
+        clip-path: polygon(100% 100%, 0% 100%, 0% 40%, 12% 37%, 28% 39%, 39% 46%, 51% 55%, 67% 56%, 81% 53%, 90% 48%, 100% 45%);
+    }
+    50%{
+        clip-path: polygon(100% 100%, 0% 100%, 0% 51%, 12% 53%, 23% 53%, 34% 51%, 50% 47%, 65% 42%, 80% 40%, 92% 37%, 100% 42%);
+    }
+}
+
+
+/* ****** Sushi Package ****** */
+.packageSushiImage{
+    height: 8rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.sushiSticks{
+    width: 5rem;
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    
+}
+.sushiPackage:hover .sushiSticks{
+    animation: sticksMotion 3s ease-in-out infinite;
+}
+@keyframes sticksMotion{
+    0%{
+        top: 0%;
+        left: 36%;
+    }
+    50%{
+        top: 5%;
+        left: 56%;
+    }
+    100%{
+        top: 15%;
+        left: 55%;
+    }
+}

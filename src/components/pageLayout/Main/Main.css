@@ -1,0 +1,446 @@
+
+.mainBox{
+    --animationSqrBefore:  3s cubic-bezier(1, -0.25, 0, 1.19) 0.3s;
+    --animationSqrAfter:  3s cubic-bezier(1, -0.25, 0, 1.19) 1s;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.animationBox{
+    background-color: #050609;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #fff;
+}
+.animationSqr{
+    background-color: #c1292e;
+    height: 170px;
+    width: 600px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.animationSqr::before {
+    content: '';
+    position: absolute;
+    left: -60px;
+    height: 50px;
+    width: 1px;
+    background: #f3f3f3;
+    box-shadow: 0 0 10px #fff;
+    filter: blur(1px);
+    opacity: 0.9;
+    transform: rotate(-20deg);
+    animation: var(--animationSqrBefore);
+}
+@keyframes flashLeft{
+    0%{
+        width: 1px;
+        height: 50px;
+        left: 0px;
+        transform: rotateZ(0deg) ;
+    }
+    20% {
+        width: 20px;
+        height: 700px;
+        left: 170px;
+        transform: rotateZ(180deg)
+    }
+    22% {
+        width: 20px;
+        height: 700px;
+        left: 170px;
+        transform: rotateZ(180deg)
+    }
+    24% {
+        width: 20px;
+        height: 700px;
+        left: 170px;
+        transform: rotateZ(180deg)
+    }
+    100%{
+        left: 660px;
+        transform: rotateZ(250deg) ;
+        height: 700px;
+        width: 1px;
+    }
+}
+.animationSqr::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    height: 50px;
+    width: 1px;
+    background: #f3f3f3;
+    box-shadow: 0 0 10px #fff;
+    filter: blur(1px);
+    opacity: 0.9;
+    transform: rotate(20deg);
+    animation: var(--animationSqrAfter);
+}
+@keyframes flashRight {
+    0% {
+            width: 20px;
+            height: 700px;
+            right: 410px;
+            transform: rotateZ(-180deg);
+        }
+    5% {
+            width: 20px;
+            height: 700px;
+            right: 410px;
+            transform: rotateZ(-180deg);
+        }
+    100% {
+            width: 1px;
+            height: 700px;
+            right: 660px;
+            transform: rotateZ(-250deg);
+        }
+}
+.ningaRun{
+    width: 160px;
+    z-index: 10;
+    display: inline;
+}
+.ningaRunActive{
+    animation: moving 3s ease forwards;
+}
+.neighbore{
+    transform: scaleX(-1);
+    width: 70px;
+    margin-left: 150px;
+    display: inline;
+}
+.neighboreActive {
+    animation: vanish 3s ease forwards;
+}
+.ninjaStand{
+    width: 90px;
+    margin-left: -100px;
+    z-index: -20;
+}
+.ninjaStandActive{
+    animation: showNinjaStand 3s ease forwards 3s;
+}
+@keyframes moving{
+    0%{
+        margin-right: 0px;
+    }
+    70%{
+        margin-right: 300px;
+        z-index: 10;
+        opacity: 1;
+    }
+    95%{
+        margin-right: 300px;
+        display: none;
+        opacity: 0;
+    }
+    100%{
+        z-index: -10;
+        margin-right: 0px;
+    }
+}
+@keyframes vanish{
+    70%{
+        display: none;
+        z-index: 0;
+        margin-left: 150px;
+    }
+    100%{
+        display: none;
+        z-index: -10;
+        margin-left: 0px;
+    }
+}
+@keyframes showNinjaStand{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        margin-left: 100px;
+        z-index: 20;
+    }
+}
+/* Title, Text and ninjas starts */
+.WelcomeScreenContainer{
+    height: 75%;
+    margin: 0;
+    padding: 0;
+    background-color: #C2C5BB;
+    color: #373737; 
+}
+.welcomeScreenBox{
+    height: 100%;
+    text-align: center;
+}
+.welcomeScreenText{
+    margin-top: 2rem;
+}
+.welcomeScreenText h1 {
+    font-size: 2.5rem;
+}
+.welcomeScreenText p {
+    font-size: 1.5rem;
+}
+.welcomeScreenText span {
+    font-size: 1.5rem ;
+    color: #c1292e;
+}
+.packagesBtn{
+    position: relative;
+    background: none;
+    color: #c1292e;
+    border: 0.170em solid #c1292e;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+.packagesBtn::before{
+    content: 'packages';
+    pointer-events: none;
+    position: absolute;
+    background: #f3f3f3;
+    border-radius: 0.5rem;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1rem) rotateX(40deg) scale(1, 0.35);
+    filter: blur(3.1em);
+    opacity: 0.9;
+}
+.packagesBtn:hover, .packagesBtn:focus{
+    background: #c1292e;
+    color: #f3f3f3;
+    text-shadow: none;
+}
+.packagesBtn:hover::before{
+    filter: blur(1em);
+}
+.ninjaStarsLeft, .ninjaStarsRight {
+    min-height: 40%;
+}
+.ninjaStars{
+    transition: 5s;
+    animation: ninjaStarMoveUpDown 5s ease-in-out infinite;
+    margin-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.ninjaStar1 {
+    animation: ninjaStarRotate 3s linear infinite;
+}
+.ninjaStar2 {
+    width: 40px;
+    align-self: flex-end;
+    animation: ninjaStarRotate 3s linear infinite;
+}
+
+@keyframes ninjaStarRotate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes ninjaStarMoveUpDown{
+    0% {
+            margin-top: 0%;
+        }
+        50% {
+            margin-top: 50%;
+        }
+        100% {
+            margin-top: 0%;
+        }
+}
+@media screen and (min-width: 1250px){
+    .welcomeScreenText h1 {
+            font-size: 4vw;
+        }
+        .welcomeScreenText p {
+            font-size: 1.5vw;
+        }
+}
+@media screen and (max-width: 750px){
+    .ninjaStar1 {
+        width: 40px;
+    }
+    .ninjaStar2 {
+        width: 30px;
+    }
+}
+@media screen and (max-height: 750px){
+    .mainBox {
+            overflow-y: scroll;
+    }
+    .WelcomeScreenContainer {
+        height: 100%;
+    }
+    .welcomeScreenText h1 {
+            font-size: 4vw;
+    }
+    .welcomeScreenText p {
+        font-size: 1.8vw;
+    }
+    .welcomeScreenText {
+        margin-top: 0rem;
+    }
+}
+@media screen and (max-height: 400px) {
+    .packagesBtn {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 650px){
+    .welcomeScreenText h1 {
+            font-size: 2rem;
+        }
+        .welcomeScreenText p {
+            font-size: 1.2rem;
+        }
+    .ninjaStar1 {
+        width: 30px;
+    }
+    .ninjaStar2 {
+        width: 20px;
+    }
+}
+@media screen and (max-width: 450px){
+    .welcomeScreenText h1 {
+            font-size: 2.0rem;
+        }
+    
+        .welcomeScreenText p {
+            font-size: 1.0rem;
+        }
+}
+@media screen and (max-width: 360px){
+    /* ninjas animation box */
+    .animationSqr {
+        height: 150px;
+        width: 300px;
+    }
+    /* left side flash animation */
+    .animationSqr::before {
+        left: -15px;
+    }
+    @keyframes flashLeft {
+        0% {
+            width: 1px;
+            height: 50px;
+            left: 0px;
+            transform: rotateZ(0deg);
+        }
+
+        20% {
+            width: 20px;
+            height: 700px;
+            left: 150px;
+            transform: rotateZ(180deg)
+        }
+
+        22% {
+            width: 20px;
+            height: 700px;
+            left: 150px;
+            transform: rotateZ(180deg)
+        }
+
+        24% {
+            width: 20px;
+            height: 700px;
+            left: 150px;
+            transform: rotateZ(180deg)
+        }
+
+        100% {
+            left: 460px;
+            transform: rotateZ(250deg);
+            height: 700px;
+            width: 1px;
+        }
+    }
+    /* right side flash animation */
+    .animationSqr::after {
+        right: -15px;
+    }
+    @keyframes flashRight {
+        0% {
+            width: 15px;
+            height: 350px;
+            right: 110px;
+            transform: rotateZ(-180deg);
+        }
+
+        5% {
+            width: 15px;
+            height: 350px;
+            right: 110px;
+            transform: rotateZ(-180deg);
+        }
+        75% {
+            width: 1px;
+        }
+        100% {
+            width: 1px;
+            height: 350px;
+            right: 460px;
+            transform: rotateZ(-250deg);
+        }
+    }
+    /* ninjas images */
+    .ningaRun {
+        width: 120px;
+    }
+    .neighbore {
+        width: 50px;
+        margin-left: 70px;
+    }
+    .ninjaStand {
+        width: 70px;
+    }
+    /* welcome screen ninja stars images */
+    .ninjaStar1 {
+        width: 25px;
+    }
+    .ninjaStar2 {
+        width: 15px;
+    }
+    /* welcome screen packages btn */
+    .packagesBtn {
+        font-size: 1.0rem;
+    }
+    /* welcome screen text */
+    .welcomeScreenText h1 {
+        font-size: 1.5rem;
+    }
+    .welcomeScreenText p {
+        font-size: 0.9rem;
+    }
+    .welcomeScreenText span {
+        font-size: 1.0rem;
+    }
+    .welcomeScreenText h3 {
+        font-size: 1rem;
+    }
+    
+}
+

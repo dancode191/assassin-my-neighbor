@@ -1,0 +1,125 @@
+.ourCustomersContainer{
+    height: 100%;
+}
+.OurCustomersOpeningTextBox{
+    background: #f3f3f3;
+    height: 20%;
+    color: #373737;
+}
+.OurCustomersOpeningTextBox h1{
+    text-align: center;
+}
+.OurCustomersReviewBox{
+    background: #C2C5BB;
+    height: 80%;
+}
+.carouselContainer{
+    width: 45rem;
+    margin: auto;
+}
+.carouselInner{
+    width: 100%;
+}
+.reviewBox{
+    background: #f3f3f3;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 25rem;
+    padding: 1rem 0rem;
+    margin: 0rem 0.5rem;
+}
+.profilePic1{
+    width: 6rem;
+}
+.profilePic2{
+    width: 6rem;
+    border-radius: 50%;
+    border: 0.2rem solid #fff;
+    background: #90A959;
+}
+.profilePic3{
+    width: 6rem;
+    border-radius: 50%;
+    border: 0.2rem solid #fff;
+    background: #6494AA;
+}
+.reviewBox h4{
+    font-size: 2.5vw ;
+}
+.reviewBox p{
+    width: 90%;
+    font-size: 1.8vw;
+    text-align: center;
+}
+.test{
+    color: #373737;
+    background: #373737;
+}
+.arrowPrev{
+    width: 2rem;
+}
+.arrowNext{
+    width: 2rem;
+    transform: rotateZ(180deg);
+}
+/* responsive: */
+@media screen and (max-width: 400px) {
+    .profilePic1 {
+            width: 4rem;
+    }
+    .profilePic2 {
+            width: 4rem;
+    }
+    .profilePic3 {
+            width: 4rem;
+    }
+    .arrowPrev {
+        width: 1.5rem;
+    }
+    .arrowNext {
+        width: 1.5rem;
+    }
+    .reviewBox h4{
+        font-size: 1.5rem;
+    }
+    .reviewBox p{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-height: 600px) {
+    .carouselContainer {
+            width: 35rem;
+    }
+}
+@media screen and (max-height: 450px) {
+    .OurCustomersOpeningTextBox{
+        height: 15%;
+    }
+    .OurCustomersReviewBox{
+        overflow-y: scroll;
+        height: 90%;
+    }
+    .OurCustomersOpeningTextBox h1 {
+        font-size: 1.7rem;
+    }
+    .carouselContainer {
+            width: 34rem;
+    }
+    .profilePic1, .profilePic2, .profilePic3 {
+            width: 3.5rem;
+    }
+    .reviewBox h4{
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+    .reviewBox {
+        padding-top: 0.5rem;
+        max-height: 13rem;
+    }
+    .reviewBox p{
+        font-size: 1rem;
+        margin: 0;
+    }
+}

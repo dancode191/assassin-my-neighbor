@@ -1,0 +1,220 @@
+
+.statisticsContainer{
+    height: 100%;
+    overflow-y: scroll;
+}
+.statisticsBox{
+    height: 20%;
+}
+.StatisticsOpeningTextBox{
+    background: #f3f3f3;
+    height: 100%;
+    text-align: center;
+}
+.StatisticsOpeningTextBox h1{
+    margin-top: 0.7rem;
+}
+.StatisticsOpeningTextBox p{
+    font-size: 0.9rem;
+}
+.statisticsGraphsBox{
+    background: #C2C5BB;
+    min-height: 65%;
+}
+.statisticsGraphs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    height:20rem ;
+    width: 15rem ;
+}
+/* graph-1,2,3 */
+.graph1Box, .graph2Box,
+.graph3Box {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+}
+.graph1, .graph2,
+.graph3{
+    background: none;
+    width: 15rem;
+    height: 13rem;
+    border-bottom: 0.5rem solid #373737;
+    border-left: 0.5rem solid #373737;
+    border-radius: 15px;
+    filter: blur(3px);
+}
+.barActivate1, .barActivate2,
+.barActivate3 {
+    position: absolute;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+}
+.graph1Text, .graph2Text,
+.graph3Text{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+/* bar counter animation */
+@property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+}
+.bar1, .bar2,
+.bar3{
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    background: #710000;
+    opacity: 0.6;
+    border-bottom: 0.5rem solid #373737 ;
+    border-radius:15px 15px 0px 0px ;
+    bottom: 0%;
+    left: 40%;
+    transition: --num 1s;
+    counter-reset: num var(--num);
+}
+.bar2 {
+    background: #90A959;
+}
+.bar3 {
+    background: #6494AA;
+}
+.active1{
+    animation: raiseBar1 2s linear forwards;
+}
+.active2{
+    animation: raiseBar2 2s linear forwards;
+}
+.active3{
+    animation: raiseBar3 2s linear forwards;
+}
+.bar1::before, .bar2::before,
+.bar3::before {
+    content: counter(num) '%';
+    position: absolute;
+    left: 45%;
+    top: -2rem;
+    color: #000;
+} 
+.bar2::before {
+    content: counter(num) ' Years';
+    left: 15%;
+} 
+.bar3::before {
+    content: counter(num) '%  :)';
+    left: 15%;
+} 
+@keyframes raiseBar1 {
+    to{
+        height: 9.7rem;
+        --num: 95;
+    }
+}
+@keyframes raiseBar2 {
+    to{
+        height: 8.5rem;
+        --num: 87;
+    }
+}
+@keyframes raiseBar3 {
+    to{
+        height: 9.2rem;
+        --num: 89;
+    }
+}
+.closingTextBox{
+    background: #f3f3f3;
+    min-height: 15%;
+    text-align: center;
+    padding-top: 1rem;
+}
+.statisticsPackageLink{
+    color: #c1292e;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.statisticsPackageLink:hover{
+    color: #C2C5BB;
+}
+/* responsive */
+@media screen and (max-width: 600px) {
+    .StatisticsOpeningTextBox h1 {
+        margin-top: 0.2rem;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+    }
+
+    .StatisticsOpeningTextBox p {
+        font-size: 90%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .StatisticsOpeningTextBox h1 {
+            margin-top: 0.2rem;
+            margin-bottom: 0;
+            font-size: 1rem;
+    }
+    .StatisticsOpeningTextBox p {
+            font-size: 70%;
+    }
+}
+@media screen and (max-height: 650px) {
+    .StatisticsOpeningTextBox h1 {
+            margin-top: 0.2rem;
+            margin-bottom: 0;
+            font-size: 1.2rem;
+    }
+    .statisticsGraphsBox {
+        min-height: 45%;
+    }
+    .graph1Box,
+    .graph2Box,
+    .graph3Box {
+        width: 100%;
+        height: 70%;
+    }
+    .graph1,
+    .graph2,
+    .graph3 {
+        width: 13rem;
+        height: 11rem;
+    }
+    .barActivate1,
+    .barActivate2,
+    .barActivate3 {
+        font-size: 1.7rem;
+    }
+    .graph1Text,
+    .graph2Text,
+    .graph3Text {
+        bottom: 5%;
+        width: 100%;
+    }
+}
+@media screen and (max-height: 450px) {
+    .statisticsBox {
+        height: 35%;
+    }
+    .StatisticsOpeningTextBox{
+        padding-top: 1.5%;
+    }
+    .statisticsGraphsBox {
+        min-height: 40%;
+    }
+    .graph1Box,
+    .graph2Box,
+    .graph3Box {
+        width: 80%;
+        height: 70%;
+    }
+}

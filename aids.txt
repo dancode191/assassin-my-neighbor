@@ -1,0 +1,18 @@
+
+colors:
+
+dark purple: #050609
+dark red: #4A051C
+jet(dark gray1): #373737
+blood red: #710000
+ash gray: #C2C5BB
+air superiority blue: #6494AA
+asparagus: #90A959
+
+poision bottle:
+color-1: #c6f673
+color-2: #5da32d
+
+sushi:
+color-1: #2B4D66
+color-2: #365E7D

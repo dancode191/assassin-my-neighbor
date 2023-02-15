@@ -1,0 +1,68 @@
+.aboutUsContainer{
+    height: 100%;
+    background: #050609;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.aboutUsContainer p{
+    text-align: center;
+}
+.ninjaFamily{
+    width: 800px;
+    height: 200px;
+    background-image: url("../../../images/ninjaVillage2.svg");
+    background-repeat: no-repeat;
+    background-size: 160% 100%;
+    background-position: center;
+}
+.aboutUsClientsLink{
+    color: #c1292e;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.aboutUsClientsLink:hover {
+    color: #C2C5BB;
+}
+@media screen and (max-height: 700px){
+    .ninjaFamily {
+    
+        background-position-y:-10px;
+    }
+}
+@media screen and (max-width: 700px){
+    .ninjaFamily {
+        width: 400px;
+        height: 200px;
+        background-size: 250% 100%;
+    }
+}
+@media screen and (max-width: 400px){
+    .ninjaFamily {
+        background-position-y:-25px;
+        background-size: 250% 120%;
+    }
+}
+@media screen and (max-height: 450px) {
+    .aboutUsContainer {
+        overflow-y: scroll;
+    }
+    .ninjaFamily {
+            width: 500px;
+            height: 100px;
+            background-size: 160% 120%;
+    }
+    .aboutUsContainer h1{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    .aboutUsContainer p {
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+    }
+    .aboutUsClientsLink {
+        font-size: 1rem;
+    }
+}

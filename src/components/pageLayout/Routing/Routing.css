@@ -1,0 +1,12 @@
+.Routing{
+    height: 100%;
+    font-family: 'Knewave', cursive;
+    padding: 0;
+}
+@media screen and (max-height: 500px) {
+    .Routing {
+        background: #C2C5BB;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+}

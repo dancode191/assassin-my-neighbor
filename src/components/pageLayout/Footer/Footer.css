@@ -1,0 +1,34 @@
+.footerContainerBox{
+    background: #373737;
+    color: #fff;
+    height: 100%;
+}
+.socialMediaBox{
+    height: 100%;
+}
+.facebookIcon, .instagramIcon, .twitterIcon, .youtubeIcon{
+    width: 3rem;
+    filter: blur(3px);
+    transition: 0.8s ease-in-out;
+}
+.facebookIcon:hover, .instagramIcon:hover, .twitterIcon:hover, .youtubeIcon:hover{
+    filter: blur(0px);
+}
+
+/* responsive: */
+@media screen and (max-width: 400px){
+    .facebookIcon,
+    .instagramIcon,
+    .twitterIcon,
+    .youtubeIcon {
+        width: 2rem;
+    }
+}
+@media screen and (max-height: 600px) {
+    .facebookIcon,
+    .instagramIcon,
+    .twitterIcon,
+    .youtubeIcon {
+        width: 1.7rem;
+    }
+}

@@ -1,0 +1,70 @@
+.navBarContainer{
+    color: #fff;
+    z-index: 1000;
+    height: 100%;
+}
+.navbar-nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbar-brand{
+    display: flex;
+}
+.navbar-brand h3{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    align-self: flex-end;
+}
+.imageLogo{
+    width: 1.85rem;
+}
+@media screen and (max-width: 1000px) {
+    .navbar-nav {
+            background: #212529;
+            padding-left: 1rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .navbar-brand h3 {
+        font-size: 1.25rem;
+    }
+    .imageLogo {
+        width: 1.55rem;
+    }
+    .navbar-brand {
+        padding-top: 0;
+    }
+}
+@media screen and (max-height: 700px) {
+    .navbar-brand h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+    }
+    .imageLogo {
+            width: 1.2rem;
+    }
+}
+@media screen and (max-height: 450px) {
+    .navBarContainer{
+        padding: 0;
+    }
+    .navbar-brand h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+    .imageLogo {
+        width: 0.9rem;
+    }
+    .menuBtn{
+        width: 2.5rem;
+        height: 1.8rem;
+        padding: 0;
+    }
+    .menuTglBtn{
+        width: 1.5rem;
+    }
+    .navbarOpen{
+        width: 50%;
+    }
+}
