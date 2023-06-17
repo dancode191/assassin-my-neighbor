@@ -13,7 +13,7 @@
   height: 73%;
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 450px) {
   .navbarContainer {
       height: 10%;
   }

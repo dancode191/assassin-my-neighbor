@@ -2,6 +2,7 @@
 .mainBox{
     --animationSqrBefore:  3s cubic-bezier(1, -0.25, 0, 1.19) 0.3s;
     --animationSqrAfter:  3s cubic-bezier(1, -0.25, 0, 1.19) 1s;
+    background-color: #C2C5BB;
     height: 100%;
     margin: 0;
     padding: 0;

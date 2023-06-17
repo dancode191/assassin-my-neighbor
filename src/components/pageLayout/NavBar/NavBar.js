@@ -4,18 +4,30 @@ import "./NavBar.css"
 
 export default function NavBar(){
 
+//close the navbar dropdown menu when not in focus
+    window.onload=function(){
+        document.addEventListener("click", function(event){
+            if(!event.target.closest("#mainNavbar") && document.getElementById("navbarCollapse").classList.contains('show')){
+                console.log("testing: " + event.target.closest("#mainNavbar"));
+                document.getElementById('hamburgerMenu').click();
+            }
+        });
+    }
+
+
+
     return(
         <>
-        <nav className="navBarContainer navbar navbar-expand-lg  navbar-dark bg-dark">
+        <nav id="mainNavbar" className="navBarContainer navbar navbar-expand-lg  navbar-dark bg-dark">
             <div className="navbarBox container-fluid">
                 <div className="navbar-brand">
-                    <img className="imageLogo" src=     {imageLogo} alt="imageLogo" />
+                    <img className="imageLogo" src={imageLogo} alt="imageLogo" />
                     <h3>
                         ssassin My Neighbor
                     </h3>
                 </div>
-                <button type="button" class="menuBtn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="menuTglBtn navbar-toggler-icon"></span>
+                <button id="hamburgerMenu" type="button" className="menuBtn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span className="menuTglBtn navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarCollapse">

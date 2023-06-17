@@ -11,12 +11,8 @@
     text-align: center;
 }
 .ninjaFamily{
-    width: 800px;
-    height: 200px;
-    background-image: url("../../../images/ninjaVillage2.svg");
-    background-repeat: no-repeat;
-    background-size: 160% 100%;
-    background-position: center;
+    width: 400px;
+    height: auto;
 }
 .aboutUsClientsLink{
     color: #c1292e;
@@ -26,33 +22,41 @@
 .aboutUsClientsLink:hover {
     color: #C2C5BB;
 }
-@media screen and (max-height: 700px){
+
+
+/* Responsive */
+@media screen and (max-width: 850px){
+    .aboutUsContainer h1{
+        font-size: 3.0rem;
+    }
+    .aboutUsContainer p {
+        font-size: 1.3rem;
+        margin-bottom: 0.2rem;
+    }
     .ninjaFamily {
-    
-        background-position-y:-10px;
+            transform: scale(1.5);
     }
 }
-@media screen and (max-width: 700px){
-    .ninjaFamily {
-        width: 400px;
-        height: 200px;
-        background-size: 250% 100%;
+@media screen and (min-height: 1000px){
+
+    .aboutUsContainer h1{
+        margin-top: 1rem;
     }
-}
-@media screen and (max-width: 400px){
+    .aboutUsContainer p {
+        font-size: 1.0rem;
+        margin-bottom: 0.2rem;
+    }
     .ninjaFamily {
-        background-position-y:-25px;
-        background-size: 250% 120%;
+        transform: scale(0.8);
     }
 }
 @media screen and (max-height: 450px) {
     .aboutUsContainer {
+        justify-content: flex-start;
         overflow-y: scroll;
     }
     .ninjaFamily {
-            width: 500px;
-            height: 100px;
-            background-size: 160% 120%;
+        transform: scale(0.8);
     }
     .aboutUsContainer h1{
         font-size: 1.5rem;

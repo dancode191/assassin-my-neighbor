@@ -7,9 +7,24 @@
     height: 20%;
     background: #6494AA;
 }
-.formBox{
+.formPage{
     height: 80%;
     background: #C2C5BB;
+    display: block;
+    opacity: 1;
+    transition: opacity 2s;
+}
+.formBox{
+    height: 100%;
+}
+.fromSubmitedComplete{
+    height: 80%;
+    background: #C2C5BB;
+    display: none;
+    text-align: center;
+    margin-top: 5%;
+    opacity: 0;
+    transition: opacity 2s;
 }
 .form-control {
     height: 3rem !important;

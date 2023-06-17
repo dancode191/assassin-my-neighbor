@@ -10,16 +10,23 @@
     background: #f3f3f3;
     height: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .StatisticsOpeningTextBox h1{
-    margin-top: 0.7rem;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
 }
 .StatisticsOpeningTextBox p{
     font-size: 0.9rem;
+    margin-bottom: 0px;
 }
 .statisticsGraphsBox{
     background: #C2C5BB;
     min-height: 65%;
+    padding: 0.5rem;
 }
 .statisticsGraphs{
     display: flex;
@@ -146,19 +153,29 @@
 .statisticsPackageLink:hover{
     color: #C2C5BB;
 }
-/* responsive */
-@media screen and (max-width: 600px) {
+
+
+/* Responsive */
+
+@media screen and (max-width: 920px) and (min-height: 1000px) {
     .StatisticsOpeningTextBox h1 {
-        margin-top: 0.2rem;
-        margin-bottom: 0;
-        font-size: 1.4rem;
+        font-size: 2.5rem;
     }
 
     .StatisticsOpeningTextBox p {
-        font-size: 90%;
+        font-size: 1.2rem;
+    }
+    .closingTextBox p{
+        font-size: 1.5rem;
+    }
+    .graph1Text,
+    .graph2Text,
+    .graph3Text {
+        font-size: 1.2rem;
     }
 }
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 450px) {
     .StatisticsOpeningTextBox h1 {
             margin-top: 0.2rem;
             margin-bottom: 0;
@@ -169,18 +186,54 @@
     }
 }
 @media screen and (max-height: 650px) {
+    
+    /* .statisticsGraphsBox {
+        min-height: 45%;
+    } */
+    /* .graph1Box,
+    .graph2Box,
+    .graph3Box {
+        width: 100%;
+        height: 70%;
+    } */
+    /* .graph1,
+    .graph2,
+    .graph3 {
+        width: 13rem;
+        height: 11rem;
+    } */
+    /* .barActivate1,
+    .barActivate2,
+    .barActivate3 {
+        font-size: 1.7rem;
+    }
+    .graph1Text,
+    .graph2Text,
+    .graph3Text {
+        bottom: 5%;
+        width: 100%;
+    } */
+}
+@media screen and (max-height: 380px) {
+    .StatisticsOpeningTextBox p {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-height: 450px) {
+    .statisticsBox {
+        height: 35%;
+    }
     .StatisticsOpeningTextBox h1 {
-            margin-top: 0.2rem;
-            margin-bottom: 0;
-            font-size: 1.2rem;
+        font-size: 1.2rem;
+        margin: 5px;
     }
     .statisticsGraphsBox {
-        min-height: 45%;
+        min-height: 40%;
     }
     .graph1Box,
     .graph2Box,
     .graph3Box {
-        width: 100%;
+        width: 80%;
         height: 70%;
     }
     .graph1,
@@ -199,22 +252,5 @@
     .graph3Text {
         bottom: 5%;
         width: 100%;
-    }
-}
-@media screen and (max-height: 450px) {
-    .statisticsBox {
-        height: 35%;
-    }
-    .StatisticsOpeningTextBox{
-        padding-top: 1.5%;
-    }
-    .statisticsGraphsBox {
-        min-height: 40%;
-    }
-    .graph1Box,
-    .graph2Box,
-    .graph3Box {
-        width: 80%;
-        height: 70%;
     }
 }

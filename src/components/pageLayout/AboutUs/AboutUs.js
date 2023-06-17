@@ -1,5 +1,4 @@
-import ninjaFamily from "../../../images/ninjaFamily.svg"
-import ninjaVillage2 from "../../../images/ninjaVillage2.svg"
+import ninjaFamily from "../../../images/ninjaFamilyWithBG_done2.svg"
 import "./AboutUs.css"
 
 export default function AboutUs(){
@@ -13,8 +12,11 @@ export default function AboutUs(){
             After our family lived in Israel for 5 years we saw the struggle of the average israeli, and we decided to use our gifts to help you. <br /><br />
             Over time we worked and dealed with different types of requests and now it's safe to say we have vast experience with the israeli problem. We've left many clients highly satisfied. You can read what they say about us <a className="aboutUsClientsLink" href="/ourCustomers">here.</a>
             </p>
-        
-            <img className="ninjaFamily img-fluid max-width: 100%" src={ninjaFamily} alt="ninja family" />
+
+            
+            <img className="ninjaFamily" src={ninjaFamily} alt="ninja family" />
+            
+            
         
         </div>
         
