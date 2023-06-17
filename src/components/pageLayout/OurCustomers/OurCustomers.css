@@ -70,6 +70,30 @@
 
 /* responsive: */
 
+@media screen and (min-width: 1450px) and (min-height: 1050px){
+    .OurCustomersOpeningTextBox h1{
+        font-size: 3.5rem;
+    }
+    .carouselInner{
+        height: 100%;
+    }
+    .active{
+        height: 100%;
+    }
+    .ourCustomersContainer{
+        overflow-y: scroll;
+    }
+    .OurCustomersReviewBox{
+        height: 100%;
+    }
+    .reviewBox {
+        height: auto;
+        padding: 1rem 0rem;
+        margin: 1rem 1rem;
+        max-height: 30rem;
+    }
+}
+
 @media screen and (max-width: 950px) and (min-height: 1000px) {
     .carouselContainer{
         width: 45rem;

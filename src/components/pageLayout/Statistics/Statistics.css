@@ -156,12 +156,28 @@
 
 
 /* Responsive */
-
+@media screen and (min-width: 1450px) and (min-height: 1050px){
+    .StatisticsOpeningTextBox h1 {
+        font-size: 2.5rem;
+    }
+    .StatisticsOpeningTextBox p {
+        font-size: 1.3rem;
+    }
+    .graph1Text,
+    .graph2Text,
+    .graph3Text {
+        font-size: 1.2rem;
+        bottom: -5%;
+    }
+    .closingTextBox p{
+        font-size: 1.5rem;
+    }
+    
+}
 @media screen and (max-width: 920px) and (min-height: 1000px) {
     .StatisticsOpeningTextBox h1 {
         font-size: 2.5rem;
     }
-
     .StatisticsOpeningTextBox p {
         font-size: 1.2rem;
     }

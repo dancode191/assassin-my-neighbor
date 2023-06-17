@@ -7,15 +7,16 @@ export default function ContactUs(){
     function handleSubmit(event){
         event.preventDefault();
 
-        let formPage = document.querySelector(".formPage")
-        let submitCompletePage = document.querySelector(".fromSubmitedComplete")
-        formPage.style.opacity = "0"
-        submitCompletePage.style.opacity = "1"
+            let formPage = document.querySelector(".formPage")
+            let submitCompletePage = document.querySelector(".fromSubmitedComplete")
+            formPage.style.opacity = "0"
+            submitCompletePage.style.opacity = "1"
 
-        setTimeout(()=>{
-            formPage.style.display = "none"
-            submitCompletePage.style.display = "block"
-        },2000)
+            setTimeout(()=>{
+                formPage.style.display = "none"
+                submitCompletePage.style.display = "block"
+            },2000)
+        
     }
 
     return (
@@ -27,7 +28,7 @@ export default function ContactUs(){
                 </div>
                 <div className="formPage">
                     <div className="formBox d-flex justify-content-center align-items-center">
-                        <form className="was-validated" onSubmit={handleSubmit} noValidate>
+                        <form className="was-validated" onSubmit={handleSubmit}>
                             <div className="form-floating">
                                 <input type="text" className="firstNameInput form-control mb-3 no-validate" id="floatingInputFirstName" placeholder="First Name"/>
                                 <label htmlFor="floatingInputFirstName" className="form-label">First Name:</label>
@@ -37,7 +38,8 @@ export default function ContactUs(){
                                 <label htmlFor="floatingInputLastName">Last Name:</label>
                             </div>
                             <div className="form-floating">
-                                <input type="email" className="EmailInput form-control mb-3" id="floatingInputEmail" placeholder="Email" required/>
+                                <input type="email" className="EmailInput form-control mb-3" id="floatingInputEmail" placeholder="Email" 
+                                required/>
                                 <label htmlFor="floatingInputEmail">Email:</label>
                                 <div className="valid-feedback"></div>
                                 <div className="invalid-feedback mb-3">Please fill out your email.</div>
@@ -54,7 +56,8 @@ export default function ContactUs(){
                                 <option value="Sushi">Sushi</option>
                             </select>
                             <div className="col text-center">
-                                <button className="submitBtn btn btn-dark text-center" type="submit">Submit</button>
+                                <button className="submitBtn btn btn-dark text-center" type="submit" >Submit</button>
+                            
                             </div>
                         </form>
                     </div>
